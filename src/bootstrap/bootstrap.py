@@ -284,6 +284,7 @@ def default_build_triple(verbose):
         'aarch64': 'aarch64',
         'amd64': 'x86_64',
         'arm64': 'aarch64',
+        'e2k': 'e2k64',
         'i386': 'i686',
         'i486': 'i686',
         'i686': 'i686',

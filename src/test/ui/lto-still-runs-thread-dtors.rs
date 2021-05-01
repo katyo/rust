@@ -2,6 +2,7 @@
 // compile-flags: -C lto
 // no-prefer-dynamic
 // ignore-emscripten no threads support
+// ignore-e2k64 asmparser
 
 use std::thread;
 

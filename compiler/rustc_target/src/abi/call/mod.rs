@@ -649,6 +649,7 @@ impl<'a, Ty> FnAbi<'a, Ty> {
                 _ => wasm32_bindgen_compat::compute_abi_info(self),
             },
             "asmjs" => wasm32::compute_abi_info(cx, self),
+            "e2k64" => (), // backend always C-abi, and ignores this attributes
             a => return Err(format!("unrecognized arch \"{}\" in target specification", a)),
         }
 

@@ -6,6 +6,7 @@
 // ignore-riscv64
 // ignore-sparc
 // ignore-sparc64
+// ignore-e2k64
 
 #![feature(llvm_asm)]
 

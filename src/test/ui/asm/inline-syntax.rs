@@ -1,4 +1,5 @@
 // revisions: x86_64 arm
+// ignore-e2k64
 //[x86_64] compile-flags: --target x86_64-unknown-linux-gnu
 //[arm] compile-flags: --target armv7-unknown-linux-gnueabihf
 

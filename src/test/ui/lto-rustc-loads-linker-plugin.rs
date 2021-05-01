@@ -2,6 +2,7 @@
 // aux-build:lto-rustc-loads-linker-plugin.rs
 // run-pass
 // no-prefer-dynamic
+// ignore-e2k64 asmparser
 
 // This test ensures that if a dependency was compiled with
 // `-Clinker-plugin-lto` then we can compile with `-Clto` and still link against

@@ -1,6 +1,7 @@
 // run-pass
 // ignore-arm
 // ignore-aarch64
+// ignore-e2k64
 // ignore-mips
 // ignore-mips64
 // ignore-powerpc

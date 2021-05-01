@@ -1,6 +1,7 @@
 // build-fail
 // ignore-emscripten no asm! support
 // Regression test for #69092
+// ignore-e2k64
 
 #![feature(llvm_asm)]
 

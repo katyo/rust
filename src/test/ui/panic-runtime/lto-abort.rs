@@ -4,6 +4,7 @@
 // no-prefer-dynamic
 // ignore-emscripten no processes
 // ignore-sgx no processes
+// ignore-e2k64 asmparser
 
 use std::process::Command;
 use std::env;

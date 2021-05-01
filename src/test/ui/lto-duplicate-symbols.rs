@@ -4,6 +4,7 @@
 // error-pattern:Linking globals named 'foo': symbol multiply defined!
 // compile-flags: -C lto
 // no-prefer-dynamic
+// ignore-e2k64 asmparser
 
 extern crate lto_duplicate_symbols1;
 extern crate lto_duplicate_symbols2;

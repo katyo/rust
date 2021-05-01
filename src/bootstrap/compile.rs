@@ -310,7 +310,9 @@ pub fn std_cargo(builder: &Builder<'_>, target: TargetSelection, stage: u32, car
     //
     // But we don't bother for the stage 0 compiler because it's never used
     // with LTO.
-    if stage >= 1 {
+    //
+    // FIXME: currently e2k llvm backend does not support asm parser
+    if stage >= 1 && !target.starts_with("e2k") {
         cargo.rustflag("-Cembed-bitcode=yes");
     }
 
