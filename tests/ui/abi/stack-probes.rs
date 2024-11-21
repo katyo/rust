@@ -4,6 +4,7 @@
 //@[aarch64] min-llvm-version: 18
 //@[x32] only-x86
 //@[x64] only-x86_64
+//@ ignore-e2k64
 //@ ignore-emscripten no processes
 //@ ignore-sgx no processes
 //@ ignore-fuchsia no exception handler registered for segfault

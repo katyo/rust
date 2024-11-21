@@ -143,7 +143,8 @@ mod imp {
 
     /// glibc passes argc, argv, and envp to functions in .init_array, as a non-standard extension.
     /// This allows `std::env::args` to work even in a `cdylib`, as it does on macOS and Windows.
-    #[cfg(all(target_os = "linux", target_env = "gnu"))]
+    // FIXME: workaround: e2k assembler generates a warning and lccrt fails to compile
+    #[cfg(all(target_os = "linux", target_env = "gnu", not(target_arch = "e2k64")))]
     #[used]
     #[link_section = ".init_array.00099"]
     static ARGV_INIT_ARRAY: extern "C" fn(

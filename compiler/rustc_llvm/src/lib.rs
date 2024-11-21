@@ -201,6 +201,13 @@ pub fn initialize_available_targets() {
         LLVMInitializeXtensaAsmParser
     );
     init_target!(
+        llvm_component = "elbrus",
+        LLVMInitializeElbrusTargetInfo,
+        LLVMInitializeElbrusTarget,
+        LLVMInitializeElbrusTargetMC,
+        LLVMInitializeElbrusAsmPrinter
+    );
+    init_target!(
         llvm_component = "webassembly",
         LLVMInitializeWebAssemblyTargetInfo,
         LLVMInitializeWebAssemblyTarget,

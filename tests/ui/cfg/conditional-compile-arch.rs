@@ -39,3 +39,6 @@ pub fn main() { }
 
 #[cfg(target_arch = "loongarch64")]
 pub fn main() { }
+
+#[cfg(target_arch = "e2k64")]
+pub fn main() { }

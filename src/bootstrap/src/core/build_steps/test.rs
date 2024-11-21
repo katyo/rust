@@ -1697,6 +1697,11 @@ NOTE: if you're sure you want to do this, please open an issue as to why. In the
         }
 
         if suite == "debuginfo" {
+            // Skip debuginfo tests for e2k, see bug 105287, dwarf NIY
+            if builder.config.build.starts_with("e2k") {
+                return;
+            }
+
             builder.ensure(dist::DebuggerScripts {
                 sysroot: builder.sysroot(compiler).to_path_buf(),
                 host: target,

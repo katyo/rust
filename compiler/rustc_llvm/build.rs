@@ -25,6 +25,7 @@ const OPTIONAL_COMPONENTS: &[&str] = &[
     "riscv",
     "xtensa",
     "bpf",
+    "elbrus",
 ];
 
 const REQUIRED_COMPONENTS: &[&str] =
@@ -220,7 +221,7 @@ fn main() {
     let mut cmd = Command::new(&llvm_config);
     cmd.arg(llvm_link_arg).arg("--libs");
 
-    if !is_crossed {
+    if !is_crossed || target.starts_with("e2k") {
         cmd.arg("--system-libs");
     }
 

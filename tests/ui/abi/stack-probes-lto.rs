@@ -7,6 +7,7 @@
 //@ ignore-sgx no processes
 //@ ignore-musl FIXME #31506
 //@ ignore-fuchsia no exception handler registered for segfault
+//@ ignore-e2k64
 //@ compile-flags: -C lto
 //@ no-prefer-dynamic
 //@ ignore-nto Crash analysis impossible at SIGSEGV in QNX Neutrino

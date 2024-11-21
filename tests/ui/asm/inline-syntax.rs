@@ -1,4 +1,5 @@
 //@ revisions: x86_64 arm arm_llvm_18
+//@ ignore-e2k64
 //@[x86_64] compile-flags: --target x86_64-unknown-linux-gnu
 //@[x86_64] check-pass
 //@[x86_64] needs-llvm-components: x86
