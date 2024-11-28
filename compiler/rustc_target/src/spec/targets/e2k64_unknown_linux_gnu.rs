@@ -1,20 +1,17 @@
 // ignore-tidy-linelength
-use crate::spec::{base, LinkerFlavor, Target};
+use crate::spec::{base, LinkerFlavor, Target, Cc, Lld};
 
 pub fn target() -> Target {
-    let mut base = base::linux_gnu_base::opts();
+    let mut base = base::linux_gnu::opts();
     base.max_atomic_width = Some(64);
     base.position_independent_executables = false;
-    base.pre_link_args
-        .get_mut(&LinkerFlavor::Gcc)
-        .unwrap()
-        .push("-fPIC".to_string());
+    base.add_pre_link_args(LinkerFlavor::Gnu(Cc::Yes, Lld::No), &["-fPIC"]);
     base.post_link_args.insert(
-        LinkerFlavor::Gcc,
+        LinkerFlavor::Gnu(Cc::Yes, Lld::No),
         vec![
-            "-llccrt_s".to_string(),
-            "-llcc".to_string(),
-            "-lm".to_string(),
+            "-llccrt_s".into(),
+            "-llcc".into(),
+            "-lm".into(),
         ],
     );
 
